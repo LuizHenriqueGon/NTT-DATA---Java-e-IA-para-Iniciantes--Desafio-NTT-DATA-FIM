@@ -22,8 +22,8 @@ O sistema é composto por quatro microsserviços principais, que são registados
 | **Spring Cloud** | <img src="https://img.shields.io/badge/Spring_Cloud-2025.0.0-green?style=for-the-badge&logo=spring" alt="Spring Cloud"> | Conjunto de ferramentas para desenvolvimento de padrões em sistemas distribuídos. |
 | **API Gateway** | <img src="https://raw.githubusercontent.com/spring-cloud/spring-cloud-gateway/main/docs/src/main/asciidoc/images/spring-cloud-gateway.png" alt="API Gateway" width="90"> | Ponto de entrada único (Single Point of Entry) para as APIs dos microsserviços. |
 | **Eureka** | <img src="https://img.stackshare.io/service/4694/20160228-202202.png" alt="Eureka" width="60"> | Service Discovery para localização dinâmica dos serviços na rede. |
-| **Spring Security** | <img src="https://spring.io/images/projects/spring-security-520e78c69d85481a525f0a200a7fd967.svg" alt="Spring Security" width="60"> | Framework de autenticação e controlo de acesso. |
-| **OpenFeign** | <img src="https://img.stackshare.io/service/11082/spring-cloud-openfeign.png" alt="OpenFeign" width="60"> | Cliente HTTP declarativo para facilitar a comunicação entre serviços. |
+| **Spring Security** | <img src="https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png  " alt="Spring Security" width="60"> | Framework de autenticação e controlo de acesso. |
+| **OpenFeign** | <img src="https://avatars.githubusercontent.com/u/20077752?s=200&v=4 " alt="OpenFeign" width="60"> | Cliente HTTP declarativo para facilitar a comunicação entre serviços. |
 | **Maven** | <img src="https://img.shields.io/badge/Maven-3.9-red?style=for-the-badge&logo=apachemaven" alt="Maven"> | Ferramenta de automação de compilação e gestão de dependências. |
 | **Git** | <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"> | Sistema de controlo de versões distribuído. |
 ---
