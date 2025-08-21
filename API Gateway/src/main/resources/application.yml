@@ -1,0 +1,51 @@
+# ===============================================
+# CONFIGURAÇÕES DO SERVIDOR
+# ===============================================
+server:
+  port: 8765
+
+# ===============================================
+# CONFIGURAÇÕES DA APLICAÇÃO E GATEWAY
+# ===============================================
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      # Configurações de descoberta de serviço
+      discovery:
+        locator:
+          # Ativa a capacidade do Gateway de encontrar serviços registados no Eureka.
+          enabled: true
+          # Converte o nome do serviço para minúsculas ao criar a rota automaticamente.
+          lower-case-service-id: true
+      # Lista de regras de roteamento
+      routes:
+        # Rota 1: Para o serviço de produtos
+        - id: product-catalog
+          # 'lb' (Load Balancer) instrui o Gateway a procurar um serviço chamado 'product-catalog' no Eureka.
+          uri: lb://product-catalog
+          # Predicado: A condição para esta rota ser acionada.
+          predicates:
+            - Path=/produtos/** # Qualquer requisição cujo caminho comece com /produtos será capturada.
+          # Filtros: Ações a serem executadas nesta rota.
+          filters:
+            # Aplica o nosso filtro customizado, que foi nomeado 'Authentication'.
+            - Authentication
+
+        # Rota 2: Para o serviço de pedidos
+        - id: order-simulator
+          uri: lb://order-simulator
+          predicates:
+            - Path=/pedidos/**
+          filters:
+            - Authentication
+
+# ===============================================
+# CONFIGURAÇÕES DO CLIENTE EUREKA
+# ===============================================
+eureka:
+  client:
+    service-url:
+      # URL do Eureka Server onde este serviço irá se registar.
+      defaultZone: http://localhost:8761/eureka

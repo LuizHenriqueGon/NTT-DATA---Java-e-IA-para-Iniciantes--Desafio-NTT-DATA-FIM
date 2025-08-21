@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # Serviço 1: Service Discovery (Eureka)
+  service-discovery:
+    build:
+      context: ./service-discovery # Caminho para a pasta do projeto
+    image: luizhenriquegon/service-discovery:1.0
+    container_name: service-discovery
+    ports:
+      - "8761:8761"
+    networks:
+      - microservice-network
+
+  # Serviço 2: API Gateway
+  api-gateway:
+    build:
+      context: ./api-gateway # Nome da pasta do seu projeto API Gateway
+    image: luizhenriquegon/api-gateway:1.0
+    container_name: api-gateway
+    ports:
+      - "8765:8765"
+    networks:
+      - microservice-network
+    depends_on: # Garante que o gateway só inicia depois do eureka
+      - service-discovery
+
+  # Serviço 3: Catálogo de Produtos
+  product-catalog:
+    build:
+      context: ./MicrosservicodeCatalogodeProdutos # Nome da pasta do seu projeto
+    image: luizhenriquegon/product-catalog:1.0
+    container_name: product-catalog
+    ports:
+      - "8100:8100"
+    networks:
+      - microservice-network
+    depends_on:
+      - service-discovery
+
+  # Serviço 4: Simulador de Pedidos
+  order-simulator:
+    build:
+      context: ./Microsservico Simulador de Pedidos # Nome da pasta do seu projeto
+    image: luizhenriquegon/order-simulator:1.0
+    container_name: order-simulator
+    ports:
+      - "8200:8200"
+    networks:
+      - microservice-network
+    depends_on:
+      - service-discovery
+      - product-catalog
+
+# Define a rede que permite que os containers comuniquem entre si
+networks:
+  microservice-network:
+    driver: bridge
