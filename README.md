@@ -20,8 +20,8 @@ O sistema é composto por quatro microsserviços principais, que são registados
 | **Java 21** | <img src="https://img.shields.io/badge/Java-21-blue?style=for-the-badge&logo=openjdk" alt="Java"> | Linguagem de programação principal do projeto. |
 | **Spring Boot 3** | <img src="https://img.shields.io/badge/Spring_Boot-3.5.5-green?style=for-the-badge&logo=spring" alt="Spring Boot"> | Framework para criação de aplicações stand-alone e robustas. |
 | **Spring Cloud** | <img src="https://img.shields.io/badge/Spring_Cloud-2025.0.0-green?style=for-the-badge&logo=spring" alt="Spring Cloud"> | Conjunto de ferramentas para desenvolvimento de padrões em sistemas distribuídos. |
-| **API Gateway** | <img src="https://raw.githubusercontent.com/spring-cloud/spring-cloud-gateway/main/docs/src/main/asciidoc/images/spring-cloud-gateway.png" alt="API Gateway" width="90"> | Ponto de entrada único (Single Point of Entry) para as APIs dos microsserviços. |
-| **Eureka** | <img src="https://img.stackshare.io/service/4694/20160228-202202.png" alt="Eureka" width="60"> | Service Discovery para localização dinâmica dos serviços na rede. |
+| **API Gateway** | <img src="https://img.icons8.com/?size=100&id=55497&format=png&color=000000" alt="API Gateway" width="90"> | Ponto de entrada único (Single Point of Entry) para as APIs dos microsserviços. |
+| **Eureka** | <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlkzp_FQs6CuApvT25Og1aJIIZn2VCWuVGg&s" alt="Eureka" width="60"> | Service Discovery para localização dinâmica dos serviços na rede. |
 | **Spring Security** | <img src="https://www.javacodegeeks.com/wp-content/uploads/2014/07/spring-security-project.png  " alt="Spring Security" width="60"> | Framework de autenticação e controlo de acesso. |
 | **OpenFeign** | <img src="https://avatars.githubusercontent.com/u/20077752?s=200&v=4 " alt="OpenFeign" width="60"> | Cliente HTTP declarativo para facilitar a comunicação entre serviços. |
 | **Maven** | <img src="https://img.shields.io/badge/Maven-3.9-red?style=for-the-badge&logo=apachemaven" alt="Maven"> | Ferramenta de automação de compilação e gestão de dependências. |
